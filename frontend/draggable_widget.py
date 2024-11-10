@@ -10,8 +10,8 @@ class DraggableWidget(QWidget):
         super().__init__()
 
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)  # Frameless widget, always on top
-        self.setGeometry(100, 100, 200, 200)  # Size and position of the widget
-        self.setWindowTitle('Floating Widget')
+        self.setGeometry(100, 100, 100, 100)  # Size and position of the widget
+        self.setWindowTitle('Tech Helper')
 
         # Draggable area is the entire widget, so no specific area to handle.
         self._drag_position = None  # Track the drag position
@@ -19,7 +19,7 @@ class DraggableWidget(QWidget):
         # Create a button at the bottom of the widget
         self.button = QPushButton("Open Menu", self)
         self.button.setStyleSheet("background-color: darkblue; color: white; font-weight: bold;")
-        self.button.setGeometry(50, 150, 100, 40)  # Position it at the bottom
+        self.button.setGeometry(10, 70, 80, 20)  # Position it at the bottom
 
         # Create an instance of RadialMenu
         self.menu = RadialMenu()
